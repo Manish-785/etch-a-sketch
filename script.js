@@ -1,8 +1,8 @@
 const container = document.querySelector('.game');
-
 let size=0;
+
 const button = document.querySelector('.button');
-button.addEventListener('click',function(){
+button.addEventListener('click',()=>{
     if(size>0){
         resets();
     }
@@ -14,12 +14,12 @@ button.addEventListener('click',function(){
     board();
 })
 
+let is_mouse_pressed = false;
+
 const reset = document.querySelector('.reset');
 reset.addEventListener('click',resets)
 function resets(){
-    const childs = document.querySelectorAll('#div');
-    for(let i=0;i<childs.length;++i)
-        childs[i].remove();
+    container.innerHTML = '';
     container.style.border='none';
 }
 
@@ -27,15 +27,15 @@ function board(){
     for(let i=0;i<size;++i){
         let row = document.createElement('div');
         for(let j=0;j<size;++j){
-            const width = 80.0/size;
+            const width = 800.0/size;
             let box = document.createElement('div');
-            box.setAttribute('id','div');
-            box.style = `padding:10px; background-color:white;flex:1 1 auto;`
+            box.style = `background-color:white; width:${width}px; height:${width}px;`
             box.textContent= '';
-            box.style.aspectRatio = '1/1';
-            box.style.width = `${width}%`;
-            box.addEventListener('mouseover',function(){
-                this.style.background = 'red';
+            box.addEventListener('mousedown',() => {is_mouse_pressed=true;});
+            box.addEventListener('mouseup',() => {is_mouse_pressed=false;});
+            box.addEventListener('mouseover',() => {
+                if(is_mouse_pressed)
+                    box.style.background = 'red';
             })
             row.append(box);
         }
