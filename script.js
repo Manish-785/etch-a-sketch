@@ -24,6 +24,18 @@ function resets(){
     container.style.border='none';
 }
 
+let colorSelector = document.querySelector('#color');
+colorSelector.addEventListener('change',()=>{
+    const div = document.querySelectorAll('#box');
+    for(let i=0;i<div.length;++i){
+        if(div[i].style['background-color']=='white')
+            div[i].addEventListener('mouseover',()=>{
+                if(is_mouse_pressed)
+                    div[i].style.background = colorSelector.value;
+        })
+    }
+})
+
 function board(){
     const color = document.querySelector('#color').value;
     for(let i=0;i<size;++i){
@@ -31,6 +43,7 @@ function board(){
         for(let j=0;j<size;++j){
             const width = 800.0/size;
             let box = document.createElement('div');
+            box.setAttribute('id','box');
             box.style = `background-color:white; width:${width}px; height:${width}px;`
             box.textContent= '';
             box.addEventListener('mousedown',() => {is_mouse_pressed=true;});
