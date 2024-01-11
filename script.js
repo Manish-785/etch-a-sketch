@@ -1,6 +1,7 @@
 const container = document.querySelector('.game');
 let size=0;
 
+
 const button = document.querySelector('.button');
 button.addEventListener('click',()=>{
     if(size>0){
@@ -24,6 +25,7 @@ function resets(){
 }
 
 function board(){
+    const color = document.querySelector('#color').value;
     for(let i=0;i<size;++i){
         let row = document.createElement('div');
         for(let j=0;j<size;++j){
@@ -35,7 +37,7 @@ function board(){
             box.addEventListener('mouseup',() => {is_mouse_pressed=false;});
             box.addEventListener('mouseover',() => {
                 if(is_mouse_pressed)
-                    box.style.background = 'red';
+                    box.style.background = color;
             })
             row.append(box);
         }

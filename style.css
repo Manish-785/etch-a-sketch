@@ -7,7 +7,7 @@
     width: 800px;
     height: 800px;
     align-self: center;
-    margin: 25px 0 0 0;
+    margin: 25px 0 25px 0;
 }
 
 body{
@@ -20,15 +20,39 @@ body{
 .header{
     background-color: black;
     font-size: 36px;
-    padding: 2.5%;
+    padding: 20px;
     text-align: center;
 }
 
-.button{
-    border:none;
-    background-color: skyblue;
+.customizations{
+    padding: 15px;
+    background-color: black;
+    margin: 25px;
+    border-radius: 25px;
 }
 
+.button,.reset{
+    border:none;
+    font-size: 24px;
+    margin: 5px;
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+.button{
+    background-color: skyblue;
+}
+.reset{
+    background-color: crimson;
+}
+
+.color-selector{
+    font-size: 18px;
+    display: block;
+    margin: 10px;
+}
+#color{
+    margin: 10px;
+}
 .content{
     display: flex;
     justify-content: center;
