@@ -75,3 +75,20 @@ body{
     display: flex;
     justify-content: center;
 }
+
+#contacts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+}
+
+#contacts a img{
+    width: 50px;
+}
+.footer{
+    text-align: center;
+    background-color: black;
+    padding: 25px;
+}
+

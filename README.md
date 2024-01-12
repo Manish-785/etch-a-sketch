@@ -21,3 +21,7 @@
 
 ## Acknowledgements
 - This project was inspired by and developed as part of The Odin Project Foundation Course
+- Images from : 
+    - Image from toppng.com : instagram logo
+    - Image by pngtree.com : linkedin logo
+    - Image by github.com : github logo
