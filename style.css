@@ -25,13 +25,28 @@ body{
 }
 
 .customizations{
-    padding: 15px;
+    padding: 25px;
     background-color: black;
     margin: 25px;
     border-radius: 25px;
 }
 
-.button,.reset{
+.slider-value{
+    color:skyblue;
+    width: 15px;
+    flex: 0 0 auto;
+}
+.slider{
+    flex:1 1 auto;
+}
+#slider{
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button,.reset,.random{
     border:none;
     font-size: 24px;
     margin: 5px;
@@ -43,6 +58,9 @@ body{
 }
 .reset{
     background-color: crimson;
+}
+.random{
+    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
 }
 
 .color-selector{

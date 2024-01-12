@@ -9,12 +9,18 @@
     <body>
         <div class="header">Etch-a-Sketch</div>
         <div class="customizations">
+            
+            <div id="slider">
+                <div class="slider-value">32</div>
+                <input type="range" min="4" max="128" value="32" class="slider">
+            </div>
             <button class="button">Start</button>
             <button class="reset">Reset</button>
             <div class="color-selector">
                 <label for="color">Select Your Color: </label>
                 <input type="color" id="color" value="#000000">
             </div>
+            <button class="random">Randomize</button>
         </div>
         <section class="content">
             <div class="game"></div>
